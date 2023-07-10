@@ -5,48 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Descubrelo</title>
-    <link rel="stylesheet"href="estiloD.css">
-    <script src="cookies.js"></script>
-    <link rel="stylesheet" type="text/css" href="ruta/slick/slick.css"/>
-    <script src="jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="estiloD.css">
+    <link rel="stylesheet" type="text/css" href="slick.css">
     <script src="slick.min.js"></script>
+    <script src="carousel.js"></script>
 </head>
 <body>
     <header id="miheader">
         <div class="container__header">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="logo.png" alt="" id="logo1">
-                </a>
-            </div>        
-            <div class="menu">
-                <nav>   
-                    <ul>
-                        <li><a href="productos.html">Productos</a></li>
-                        <li><a href="unetenos.html">Unetenos</a></li>
-                        <li><a href="contactos.html">Contactos</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="botones">
-                <div class="menu1">
-                <nav>
-                    <ul>
-                        <li><button type="button" onclick="iniciarSesion()">Iniciar sesión</button></li>
-                    </ul>
-                </nav>
+          <div class="logo">
+            <a href="index.html">
+              <img src="logo.png" alt="" id="logo1">
+            </a>
+          </div>
+          <div class="menu">
+            <nav>
+              <ul>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="unetenos.html">Unetenos</a></li>
+                <li><a href="contactos.html">Contactos</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="botones">
+            <div class="menu1">
+              <nav>
+                <ul>
+                  <li><button type="button" onclick="iniciarSesion()">Iniciar sesión</button></li>
+                </ul>
+              </nav>
             </div>
             <div class="menu2">
-                <nav>
-                    <ul>
-                        <li><button type="button" onclick="registrarse()">Registrarse</button></li>
-                    </ul>
-                </nav>
+              <nav>
+                <ul>
+                  <li><button type="button" onclick="registrarse()">Registrarse</button></li>
+                </ul>
+              </nav>
             </div>
-    </header>
-    <div class="text-container">
+          </div>
+        </div>
+        <span id="nombreUsuario"></span>
+        <button class="cerrar-sesion-button" onclick="cerrarSesion()">Cerrar sesión</button>
+      </header>
+      <div class="text-container">
         <h2>Ofrecemos todo tipo de juegos, desde los más antiguos a los más nuevos</h2>
-        <p>En Juegos Universo, contamos con una amplia selección de juegos que abarcan desde los clásicos hasta los más recientes. ¡Encuentra tu juego favorito!</p>
+        <p>En Juegos Universo, contamos con una amplia selección de juegos que abarcan desde los clásicos hasta los más
+          recientes. ¡Encuentra tu juego favorito!</p>
         <div class="carousel juegos-carousel">
           <div><img src="retro.png" alt="Imagen 1"></div>
           <div><img src="juegoM.png" alt="Imagen 2"></div>
@@ -62,7 +67,7 @@
         </div>
       </div>
       
-      <div class="text-container">
+      <div class="text-container1">
         <h2>En Juegos Universo hay:</h2>
         <ul>
           <li>Rápida atención al cliente</li>
@@ -79,5 +84,6 @@
 <div id="dialog-overlay"></div>
 <script src="scriptIniciarSesion.js"></script>
 <script src="scriptRegistrarse.js"></script>
+<script src="jquery.js"></script>
 </body>
 </html>

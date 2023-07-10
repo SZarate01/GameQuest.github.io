@@ -58,13 +58,8 @@ function guardarRegistro() {
         ciudad: ciudad
     };
 
-    // Obtener usuarios registrados del LocalStorage
     var usuariosRegistrados = JSON.parse(localStorage.getItem("usuarios")) || [];
-
-    // Agregar el nuevo usuario al array
     usuariosRegistrados.push(nuevoUsuario);
-
-    // Guardar usuarios registrados en el LocalStorage
     localStorage.setItem("usuarios", JSON.stringify(usuariosRegistrados));
 
     var dialogBox = document.querySelector(".dialog-box");
@@ -76,7 +71,6 @@ function guardarRegistro() {
     document.body.classList.remove("blur");
 
     mostrarMensajeEmergente("¡Registrado con éxito!");
-    isLoggedIn = true;
     hideLoginButtons();
 }
 

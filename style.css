@@ -206,3 +206,7 @@ h1, h2, h3, h4 {
     position: relative;
     top: 300px;
 }
+
+.cerrar-sesion-button {
+    display: none;
+}

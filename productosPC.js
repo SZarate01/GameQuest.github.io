@@ -28,20 +28,20 @@ document.addEventListener('DOMContentLoaded', function() {
       ];
     } else if (category === 'playstation') {
       products = [
-        { image: 'nodisponible.png', text: 'Capturadoras' },
-        { image: 'nodisponible.png', text: 'Juegos' },
-        { image: 'nodisponible.png', text: 'Repuestos' },
-        { image: 'nodisponible.png', text: 'Mandos' },
-        { image: 'nodisponible.png', text: 'Almacenamiento' },
+        { image: 'capturadoras.png', text: 'Capturadoras' },
+        { image: 'juegosP.png', text: 'Juegos' },
+        { image: 'repuestosP.png', text: 'Repuestos' },
+        { image: 'mandosP.png', text: 'Mandos' },
+        { image: 'SSD.png', text: 'Almacenamiento' },
         { image: 'nodisponible.png', text: 'Limpiadores' }
       ];
     } else if (category === 'xbox') {
       products = [
-        { image: 'nodisponible.png', text: 'Capturadoras' },
-        { image: 'nodisponible.png', text: 'Juegos' },
-        { image: 'nodisponible.png', text: 'Repuestos' },
-        { image: 'nodisponible.png', text: 'Mandos' },
-        { image: 'nodisponible.png', text: 'Almacenamiento' },
+        { image: 'capturadoras.png', text: 'Capturadoras' },
+        { image: 'juegosX.png', text: 'Juegos' },
+        { image: 'repuestosX.png', text: 'Repuestos' },
+        { image: 'mandosX.png', text: 'Mandos' },
+        { image: 'SSDX.png', text: 'Almacenamiento' },
         { image: 'nodisponible.png', text: 'Limpiadores' }
       ];
     } else if (category === 'nintendo') {

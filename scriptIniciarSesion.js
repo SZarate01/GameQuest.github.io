@@ -26,30 +26,48 @@ function iniciarSesion() {
 function autenticar() {
     var usuarioCorreo = document.getElementById("usuarioCorreo").value;
     var contrasena = document.getElementById("contrasena").value;
-
+  
+    if (usuarioCorreo.trim() === "" && contrasena.trim() === "") {
+      mostrarMensajeEmergente("Por favor, ingresa tus datos y vuelve a intentarlo");
+      return;
+    }
+  
+    if (usuarioCorreo.trim() === "") {
+      mostrarMensajeEmergente("Ingresa tu nombre de usuario, por favor");
+      return;
+    }
+  
+    if (contrasena.trim() === "") {
+      mostrarMensajeEmergente("Ingresa tu contraseña, por favor");
+      return;
+    }
+  
     var usuariosRegistrados = JSON.parse(localStorage.getItem("usuarios")) || [];
     var usuarioEncontrado = usuariosRegistrados.find(function(usuario) {
-        return usuario.correo === usuarioCorreo && usuario.contrasena === contrasena;
+      return usuario.correo === usuarioCorreo && usuario.contrasena === contrasena;
     });
-
+  
     var dialogBox = document.querySelector(".dialog-box");
     dialogBox.parentNode.removeChild(dialogBox);
-
+  
     var dialogOverlay = document.getElementById("dialog-overlay");
     dialogOverlay.style.display = "none";
-
+  
     document.body.classList.remove("blur");
-
+  
     if (usuarioEncontrado) {
-        mostrarMensajeEmergente("¡Inicio de sesión exitoso!");
-        isLoggedIn = true;
-        setCookie("isLoggedIn", "true", 7);
-        hideLoginButtons();
+      mostrarMensajeEmergente("¡Inicio de sesión exitoso!");
+      isLoggedIn = true;
+      setCookie("isLoggedIn", "true", 7);
+      hideLoginButtons();
+      updateLoginStatus();
     } else {
-        mostrarMensajeEmergente("Fallo en el inicio de sesión, revisa que el correo o contraseña estén bien escritos e inténtalo nuevamente.");
-        showLoginButtons();
+      mostrarMensajeEmergente("Fallo en el inicio de sesión, revisa que el correo o contraseña estén bien escritos e inténtalo nuevamente.");
+      showLoginButtons();
     }
-}
+  }
+  
+  
 
 function mostrarMensajeEmergente(mensaje) {
     var dialogBox = document.createElement("div");
@@ -81,3 +99,44 @@ function showLoginButtons() {
     loginButton.style.display = "inline-block";
     registerButton.style.display = "inline-block";
 }
+
+function createLogoutButton() {
+    var menuElement = document.querySelector(".menu1 ul");
+  
+    // Crea el botón de "Cerrar sesión"
+    var logoutButton = document.createElement("button");
+    logoutButton.className = "cerrar-sesion-button";
+    logoutButton.textContent = "Cerrar sesión";
+    logoutButton.onclick = cerrarSesion;
+  
+    // Agrega el botón al menú
+    menuElement.appendChild(logoutButton);
+
+    localStorage.removeItem("isLoggedIn");
+    localStorage.removeItem("nombreUsuario");
+    location.reload(); // Reinicia la página
+}
+  
+function showLoggedInUser(username) {
+    var nombreUsuarioElement = document.createElement("li");
+    nombreUsuarioElement.textContent = "Sesión de " + username;
+  
+    var menuElement = document.querySelector(".menu1 ul");
+    menuElement.appendChild(nombreUsuarioElement);
+}
+  
+function updateLoginStatus() {
+    var nombreUsuario = getCookie("nombreUsuario");
+    var cerrarSesionButton = document.querySelector(".cerrar-sesion-button");
+  
+    if (nombreUsuario) {
+      document.getElementById("nombreUsuario").textContent = "Sesión de " + nombreUsuario;
+      cerrarSesionButton.style.display = "inline-block";
+    } else {
+      document.getElementById("nombreUsuario").textContent = "";
+      cerrarSesionButton.style.display = "none";
+    }
+    window.addEventListener("load", updateLoginStatus);
+  }
+  
+  
