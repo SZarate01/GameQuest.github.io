@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descubrelo</title>
+    <link rel="stylesheet"href="estiloD.css">
+    <script src="cookies.js"></script>
+    <link rel="stylesheet" type="text/css" href="ruta/slick/slick.css"/>
+    <script src="jquery.js"></script>
+    <script src="slick.min.js"></script>
+</head>
+<body>
+    <header id="miheader">
+        <div class="container__header">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.png" alt="" id="logo1">
+                </a>
+            </div>        
+            <div class="menu">
+                <nav>   
+                    <ul>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="unetenos.html">Unetenos</a></li>
+                        <li><a href="contactos.html">Contactos</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="botones">
+                <div class="menu1">
+                <nav>
+                    <ul>
+                        <li><button type="button" onclick="iniciarSesion()">Iniciar sesión</button></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="menu2">
+                <nav>
+                    <ul>
+                        <li><button type="button" onclick="registrarse()">Registrarse</button></li>
+                    </ul>
+                </nav>
+            </div>
+    </header>
+    <div class="text-container">
+        <h2>Ofrecemos todo tipo de juegos, desde los más antiguos a los más nuevos</h2>
+        <p>En Juegos Universo, contamos con una amplia selección de juegos que abarcan desde los clásicos hasta los más recientes. ¡Encuentra tu juego favorito!</p>
+        <div class="carousel juegos-carousel">
+          <div><img src="retro.png" alt="Imagen 1"></div>
+          <div><img src="juegoM.png" alt="Imagen 2"></div>
+        </div>
+      </div>
+      
+      <div class="text-container">
+        <h2>Ofrecemos todo tipo de consolas, desde la antigua Atari hasta el más nuevo Xbox Series X</h2>
+        <p>Además de juegos, también ofrecemos una gran variedad de consolas de videojuegos, desde las clásicas hasta las más modernas. ¡Encuentra la tuya!</p>
+        <div class="carousel consolas-carousel">
+          <div><img src="consolaModerna.png" alt="Consola 1"></div>
+          <div><img src="consolas.png" alt="Consola 2"></div>
+        </div>
+      </div>
+      
+      <div class="text-container">
+        <h2>En Juegos Universo hay:</h2>
+        <ul>
+          <li>Rápida atención al cliente</li>
+          <li>Múltiples cosas relacionadas a los videojuegos</li>
+          <li>Entregas en tiempo récord a domicilio</li>
+        </ul>
+        <div class="carousel servicios-carousel">
+          <div><img src="servicio.png" alt="Servicio al cliente"></div>
+          <div><img src="perifericos.png" alt="Periféricos"></div>
+          <div><img src="reloj.png" alt="Reloj"></div>
+        </div>
+      </div>
+      
+<div id="dialog-overlay"></div>
+<script src="scriptIniciarSesion.js"></script>
+<script src="scriptRegistrarse.js"></script>
+</body>
+</html>

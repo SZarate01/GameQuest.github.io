@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactos</title>
+    <link rel="stylesheet" href="estiloC.css">
+    <script src="cookies.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container__header">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.png" alt="" id="logo1">
+                </a>
+            </div>
+            <div class="menu">
+                <nav>   
+                    <ul>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="unetenos.html">Unetenos</a></li>
+                        <li><a href="contactos.html">Contactos</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="botones">
+                <div class="menu1">
+                <nav>
+                    <ul>
+                        <li><button type="button" onclick="iniciarSesion()">Iniciar sesión</button></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="menu2">
+                <nav>
+                    <ul>
+                        <li><button type="button" onclick="registrarse()">Registrarse</button></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        
+    </header>
+    <div class="contact-section">
+        <div class="centered-container">
+            <h1>Contactos</h1>
+            <p>¿Tienes preguntas sobre nuestra modalidad? ¿No estás seguro de qué comprar?</p>
+            <p>¿Hay algún producto que no esté en tu presupuesto? ¡Contáctanos! Estaremos encantados de llegar a un acuerdo contigo.</p>
+            <div class="input-container">
+                <label for="email">Su correo electrónico:</label>
+                <input type="email" id="email" placeholder="Ingrese su correo electrónico">
+            </div>
+            <div class="input-container">
+                <label for="phone">Su número de teléfono:</label>
+                <input type="text" id="phone" placeholder="Ingrese su número de teléfono">
+            </div>
+            <div class="botonEnviar">
+                <button onclick="validateEmail()">Enviar</button>
+            </div>
+            <div>
+                <h2>Después de ingresar un correo válido, presione "Enviar" y nosotros nos contactaremos con usted en horas hábiles.</h2>
+            </div>
+        </div>
+    </div>
+
+<script>
+    function validateEmail() {
+        var emailInput = document.getElementById("email");
+        var email = emailInput.value;
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (emailRegex.test(email)) {
+            alert("¡El correo electrónico es válido!");
+        } else {
+            alert("Por favor, ingrese un correo electrónico válido.");
+        }
+    }
+</script>
+<div id="dialog-overlay"></div>
+<script src="scriptIniciarSesion.js"></script>
+<script src="scriptRegistrarse.js"></script>
+</body>
+</html>

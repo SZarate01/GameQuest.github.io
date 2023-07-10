@@ -1,0 +1,229 @@
+body {
+    background-color: rgb(0, 0, 0);
+    color: #4adc9c;
+}
+
+#logo1 {
+    width: 250px;
+    height: 157px;
+    left: 50px;
+    top: 20px;
+    position: absolute;
+}
+
+.container__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.menu nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 60px;
+    right: 250px;
+    transform: translateX(-160%);
+}
+
+.menu nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-right: 10px;
+}
+
+.menu nav ul li a {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 20px;
+    border: 1px;
+    color: #4adc9c;
+    font-size: 1.9em;
+}
+
+.menu1 nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 30px;
+    right: -10px;
+    transform: translateX(-160%);
+}
+
+.menu1 nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu1 nav ul li button {
+    display: inline-block;
+    margin-right: 0px;
+    padding: 20px;
+    border: none;
+    color: #4adc9c;
+    font-size: 1.9em;
+    background-color: black;
+    cursor: pointer;
+}
+
+.menu2 nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 30px;
+    right: -200px;
+    transform: translateX(-160%);
+}
+
+.menu2 nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu2 nav ul li button {
+    display: inline-block;
+    margin-right: 0px;
+    padding: 20px;
+    border: none;
+    color: white;
+    font-size: 1.9em;
+    background-color: #4adc9c;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+#dialog-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 9999;
+    display: none;
+}
+
+.dialog-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 10000;
+}
+
+.dialog-box h2 {
+    margin-top: 0;
+}
+
+.dialog-box label {
+    display: block;
+    margin-top: 10px;
+}
+
+.dialog-box input {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.dialog-box button {
+    display: block;
+    margin-top: 10px;
+}
+
+.product-list-container {
+    border: 1px solid #4adc9c;
+    padding: 10px;
+    position: fixed;
+    left: 10%;
+    top: 30%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%);
+}
+  
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 200px;
+    height: 100vh;
+  }
+  
+  .product-list {
+    padding: 0;
+    margin: 0;
+    text-align: left;
+  }
+  
+  .product-list li {
+    list-style-type: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: x-large;
+    position: relative;
+    left: -20px;
+    top: auto;
+  }
+  
+  .product-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    width: 300px;
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  .product-box img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #4adc9c;
+    border-radius: 4px;
+  }
+  
+  .product-box div {
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid #4adc9c;
+    border-radius: 4px;
+    padding: 5px;
+    width: 100%;
+  }
+  
+  .product-row {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: -300px;
+    flex-wrap: wrap;
+  }
+  
+  .product-container .product-row:last-child {
+    justify-content: flex-start;
+    margin-bottom: 100px;
+  }
+  .product-box img:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s;
+  }

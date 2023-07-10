@@ -1,0 +1,208 @@
+body {
+    background-color: rgb(0, 0, 0);
+    color: #4adc9c;
+    background-image: url("fondo.png");
+    background-repeat: no-repeat;
+    background-position-x: 24cm;
+    background-position-y: -2cm;
+    background-size: 1400px;
+}
+
+#logo1 {
+    width: 250px;
+    height: 157px;
+    position: absolute;
+    left: 50px;
+    top: 20px;
+}
+
+.container__header {
+    display: absolute;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: absolute;
+    align-items: top;   
+}
+    
+.menu nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 60px;
+    right: 250px;
+    transform: translateX(-160%);
+}
+
+.menu nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-right: 10px;
+}
+
+.menu nav ul li a {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 20px;
+    border: 1px;
+    color: #4adc9c;
+    font-size: 1.9em;
+}
+
+.menu1 nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 30px;
+    right: -10px;
+    transform: translateX(-160%);
+}
+
+.menu1 nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu1 nav ul li button {
+    display: inline-block;
+    margin-right: 0px;
+    padding: 20px;
+    border: none;
+    color: #4adc9c;
+    font-size: 1.9em;
+    background-color: black;
+    cursor: pointer;
+}
+
+.menu2 nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 30px;
+    right: -200px;
+    transform: translateX(-160%);
+}
+
+.menu2 nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu2 nav ul li button {
+    display: inline-block;
+    margin-right: 0px;
+    padding: 20px;
+    border: none;
+    color: white;
+    font-size: 1.9em;
+    background-color: #4adc9c;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+#dialog-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 9999;
+    display: none;
+}
+
+.dialog-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 10000;
+}
+
+.dialog-box h2 {
+    margin-top: 0;
+}
+
+.dialog-box label {
+    display: block;
+    margin-top: 10px;
+}
+
+.dialog-box input {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.dialog-box button {
+    display: block;
+    margin-top: 10px;
+}
+
+.menu3 nav ul {
+    list-style: none;
+}
+
+.menu3 nav ul li a{
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 100px;
+    position: relative;
+    top: 630px;
+    left: 270px;
+    background-color: #4adc9c;
+    border-radius: 100px;
+    padding: 20px;
+    color: black;
+    font-size: 190%;
+}
+
+h1 {
+    font-size: 40px;
+    color: white;
+    font-style: italic;
+}
+
+h2 {
+    font-size: 80px;
+    color: white;
+}
+
+h3 {
+    font-size: 30px;
+    font-style: normal;
+    text-align: left;
+    line-height: 1.2;
+    display: inline-block;
+    width: 33%;
+    color: white;
+}
+
+h4 {
+    font-size: 30px;
+    color: white;
+}
+
+h1, h2, h3, h4 {
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 100px;
+    position: relative;
+    top: 300px;
+}

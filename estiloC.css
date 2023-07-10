@@ -1,0 +1,221 @@
+body {
+    background-color: rgb(0, 0, 0);
+    color: #4adc9c;
+}
+
+#logo1 {
+    width: 250px;
+    height: 157px;
+    left: 50px;
+    top: 20px;
+    position: absolute;
+}
+
+.container__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.menu nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 60px;
+    right: 250px;
+    transform: translateX(-160%);
+}
+
+.menu nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-right: 10px;
+}
+
+.menu nav ul li a {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 20px;
+    border: 1px;
+    color: #4adc9c;
+    font-size: 1.9em;
+}
+
+.menu1 nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 30px;
+    right: -10px;
+    transform: translateX(-160%);
+}
+
+.menu1 nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 30px;
+    right: -10px;
+    transform: translateX(-160%);
+}
+
+.menu1 nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu1 nav ul li button {
+    display: inline-block;
+    margin-right: 0px;
+    padding: 20px;
+    border: none;
+    color: #4adc9c;
+    font-size: 1.9em;
+    background-color: black;
+    cursor: pointer;
+}
+
+.menu2 nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 30px;
+    right: -200px;
+    transform: translateX(-160%);
+}
+
+.menu2 nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu2 nav ul li button {
+    display: inline-block;
+    margin-right: 0px;
+    padding: 20px;
+    border: none;
+    color: white;
+    font-size: 1.9em;
+    background-color: #4adc9c;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+#dialog-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 9999;
+    display: none;
+}
+
+.dialog-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 10000;
+}
+
+.dialog-box h2 {
+    margin-top: 0;
+}
+
+.dialog-box label {
+    display: block;
+    margin-top: 10px;
+}
+
+.dialog-box input {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.dialog-box button {
+    display: block;
+    margin-top: 10px;
+}
+
+.contact-section {
+    text-align: center;
+    position: absolute;
+    top: 270px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.contact-section h1 {
+    margin-top: 0;
+    font-size: 70px;
+}
+
+.contact-section p {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.centered-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 400px;
+    width: 70%;
+    max-width: 600px;
+    padding: 20px;
+    border: 1px solid #4adc9c;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.input-container {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.botonEnviar {
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.contact-section h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}

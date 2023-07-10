@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link rel="stylesheet"href="estiloP.css">
+    <script src="cookies.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container__header">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.png" alt="" id="logo1">
+                </a>
+            </div>        
+            <div class="menu">
+                <nav>   
+                    <ul>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="unetenos.html">Unetenos</a></li>
+                        <li><a href="contactos.html">Contactos</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="botones">
+                <div class="menu1">
+                <nav>
+                    <ul>
+                        <li><button type="button" onclick="iniciarSesion()">Iniciar sesión</button></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="menu2">
+                <nav>
+                    <ul>
+                        <li><button type="button" onclick="registrarse()">Registrarse</button></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div id="dialog-overlay"></div>
+    
+    <div class="product-list-container">
+        <div class="product-list">
+            <ul>
+                <li onclick="showProducts('pc')" data-category="pc">Productos de PC</li>
+                <li onclick="showProducts('playstation')" data-category="playstation">Productos de PlayStation</li>
+                <li onclick="showProducts('xbox')" data-category="xbox">Productos de Xbox</li>
+                <li onclick="showProducts('nintendo')" data-category="nintendo">Productos de Nintendo</li>
+                <li onclick="showProducts('mercancia')" data-category="mercancia">Mercancía de la empresa</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="product-container" id="product-container"></div>
+
+    <script src="scriptIniciarSesion.js"></script>
+    <script src="scriptRegistrarse.js"></script>
+    <script src="productosPC.js"></script>
+</body>
+</html>
